@@ -1,0 +1,25 @@
+.realize{
+    .news__left{
+        width: 45.5%;
+
+        @include tablet_small{
+            width: 100%;
+        }
+
+        &__content{
+            @include tablet{
+                margin-bottom: rem(70);
+            }
+        }
+    }
+    .news__right{
+        width: 45.5%;
+        height: rem(650);
+        margin-top: rem(50);
+
+        @include tablet{
+            width: 47.5%;
+            height: 23.625rem;
+        }
+    }
+}

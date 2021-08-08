@@ -1,0 +1,25 @@
+.show_modal{
+    width: rem(300);
+    height: rem(300);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ffffff54;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @include tablet{
+        width: 12rem;
+        height: 12rem;
+    }
+}

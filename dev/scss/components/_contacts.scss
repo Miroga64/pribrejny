@@ -1,0 +1,189 @@
+.contacts{
+    width: 100%;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        @include tablet_small{
+            flex-wrap: wrap;
+        }
+    }
+
+    .main_block__right.top{
+        height: rem(785);
+
+        @include tablet{
+            height: 37.0625rem;
+        }
+    }
+
+    &__call{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: rem(270);
+        height: rem(80);
+        background-color: #67A15F;
+        text-align: center;
+        cursor: pointer;
+        border-radius: rem(50);
+        margin-top: rem(40);
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(12);
+            width: rem(200);
+            height: rem(50);
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__right{
+        height: rem(700);
+        position: relative;
+        z-index: 1;
+        width: 57%;
+
+        @include tablet{
+            height: rem(500);
+        }
+
+        @include tablet_small{
+            width: 100%;
+            margin-top: rem(26);
+        }
+    }
+
+    &__left{
+        width: 100%;
+        margin-top: rem(60);
+
+        @include tablet{
+            margin-top: rem(36);
+        }
+
+        &__content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+
+            @include tablet{
+                flex-wrap: wrap;
+            }
+
+            &__right{
+                @include tablet{
+                    width: 100%;
+                    margin-top: rem(16);
+                }
+            }
+        }
+
+        &__block{
+            width: 100%;
+            margin-bottom: rem(40);
+
+            @include tablet{
+                margin-bottom: rem(30);
+            }
+        }
+
+        &__bottom{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-start;
+        }
+
+        &__link{
+            width: rem(80);
+            height: rem(80);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all .3s;
+
+            @media(max-width: 1590px){
+                width: rem(60);
+                height: rem(60);
+            }
+
+            @include tablet{
+                width: rem(45);
+                height: rem(45);
+            }
+
+            &.fb{
+                background-image:url(/images/fb_black_new.svg);
+    
+                &:hover{
+                    background-image:url(/images/fb_white.svg);
+                }
+            }
+    
+            &.vk{
+                background-image:url(/images/vk_black_new.svg);
+    
+                &:hover{
+                    background-image:url(/images/vk_white.svg);
+                }
+            }
+    
+            &.inst{
+                background-image:url(/images/inst_black_new.svg);
+    
+                &:hover{
+                    background-image:url(/images/inst_white.svg);
+                }
+            }
+
+            &:not(:last-child){
+                margin-right: rem(10);
+            }
+        } 
+
+        &__title{
+            width: 100%;
+            font-style: normal;
+            font-family: $font_second;
+            font-size: rem(26);
+            line-height: 135%;
+            color: #323232;
+            margin-bottom: rem(20);
+
+            @include tablet{
+                font-size: rem(20);
+                margin-bottom: rem(10);
+            }
+        }
+
+        &__element{
+            display: block;
+            width: 100%;
+            color: #868686;
+            font-style: normal;
+            font-weight: normal;
+            font-size: rem(18);
+            line-height: 170%;
+            margin-bottom: rem(5);
+
+            @include tablet{
+                font-size: rem(13);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

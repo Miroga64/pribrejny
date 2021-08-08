@@ -1,0 +1,120 @@
+.documentation{
+    width: 100%;
+    height: rem(410);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 13%;
+    padding-right: 13%;
+    background-color: #67A15F;
+
+    @include tablet{
+        padding-left: rem(15);
+        padding-right: rem(15);
+        height: rem(180);
+    }
+
+    @include tablet_small{
+        padding-left: rem(26);
+        padding-right: rem(26);
+        height: rem(140);
+    }
+
+    &__info{
+        @include tablet{
+            margin-right: rem(20);
+        }
+    }
+
+    &__img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/dom_rf.svg);
+        width: rem(110);
+        height: rem(110);
+        margin-right: rem(90);
+
+        @include tablet{
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(40);
+        }
+
+        @include tablet_small{
+            width: rem(40);
+            height: rem(40);
+            margin-right: rem(20);
+        }
+    }
+
+    &__title{
+        font-size: rem(40);
+        line-height: 135%;
+        color: white;
+        font-family: $font_second;
+        margin-bottom: rem(10);
+
+        @include tablet{
+            font-size: rem(28);
+        }
+
+        @include tablet_small{
+            font-size: rem(20);
+        }
+    }
+
+    &__subtitle{
+        font-size: rem(18);
+        line-height: 170%;
+        color: white;
+
+        a{
+            color: white;
+        }
+
+        @include tablet{
+            font-size: rem(14);
+        }
+
+        @include tablet_small{
+            font-size: rem(10);
+        }
+    }
+
+    &__link{
+        display: block;
+        width: rem(110);
+        height: rem(110);
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        align-content: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid white;
+        border-radius: 50%;
+
+        &:after{
+            content: '';
+            width: rem(20);
+            height: 6px;
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(/images/slider_arrow_white.svg);
+        }
+
+        @include tablet{
+            width: rem(50);
+            height: rem(50);
+        }
+
+        @include tablet_small{
+            width: rem(40);
+            height: rem(40);
+        }
+    }
+}

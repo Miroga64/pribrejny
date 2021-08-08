@@ -1,0 +1,40 @@
+.slider_arrows{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #DCDCDC;
+
+    @include tablet{
+        width: rem(50);
+        height: rem(50);
+    }
+
+    @include tablet_small{
+        width: rem(60);
+        height: rem(60);
+    }
+
+    &:first-child{
+        margin-right: rem(10);
+    }
+
+    &:after{
+        content: '';
+        width: rem(12);
+        height: 0.55rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/slider_arrow.svg);
+        display: block;
+    }
+
+    &.rotate{
+        transform: rotate(180deg);
+    }
+}

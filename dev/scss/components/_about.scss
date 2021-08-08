@@ -1,0 +1,308 @@
+.about{
+    width: 100%;
+
+    &.align_center{
+        align-content: center;
+        align-items: center;
+    }
+
+    .page__title{
+        margin-bottom: rem(30);
+    }
+
+    .main_block__right.top{
+        height: rem(1000);
+        background-position: left;
+
+        @include tablet{
+            height: 47.5rem;
+        }
+    }
+
+    .main_block__row.image__left{
+        
+        @include tablet_small{
+            margin-top: rem(100);
+        }
+    }
+
+    .main_block__left.middle{
+        height: rem(744);
+
+        @include tablet{
+            height: 25.5rem;
+        }
+
+        @include tablet_small{
+            display: none;
+        }
+    }
+
+    .main_block__row.image__right .main_block__right{
+        @media(max-width: 1360px){
+            margin-left: rem(50);
+        }
+
+        @include tablet{
+            margin-left: rem(16);
+        }
+    }
+
+    .main_block__row.image__right .main_block__left{
+        @media(max-width: 1360px){
+            padding-left: 6%;
+        }  
+
+        @include tablet{
+            padding-left: rem(15);
+        }
+    }
+
+    .main_block__text{
+        @include tablet{
+            font-size: rem(13);
+        }
+    }
+
+    .main_block__list{
+        @include tablet{
+            margin-top: rem(24);
+        }
+    }
+
+    .main_block__list__element{
+        @include tablet{
+            font-size: rem(16);
+        }
+        span{
+            position: relative;
+            transition: all .3s;
+            left: 0;
+        }
+
+        &:hover{
+            padding-left: 0;
+
+            span{
+                left: rem(20);
+            }
+        }
+    }
+
+    &__left{
+        width: 39.5%;
+
+        &.big{
+            width: 43%;
+
+            @include tablet_small{
+                width: 100%;
+                margin-bottom: rem(20);
+            }
+        }
+
+        @include tablet{
+            width: 100%;
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__right{
+        width: 57%;
+
+        &.small{
+            width: 50%;
+
+            .about__image{
+                background-size: contain;
+            }
+
+            @include tablet_small{
+                width: 100%;
+            }
+        }
+
+        @include tablet{
+            width: 100%;
+        }
+    }
+
+    &__date{
+        width: fit-content;
+        padding: rem(25);
+        background-color: #F2F2F2;
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        align-content: flex-end;
+
+        @include tablet_small{
+            padding: rem(20);
+        }
+
+        &__text{
+            font-size: rem(18);
+            line-height: 170%;
+            margin-right: rem(20);
+            font-family: $font_third;
+            color: #323232;
+
+            @include tablet_small{
+                font-size: 0.775rem;
+                line-height: 130%;
+            }
+        }
+
+        &__time{
+            font-weight: 300;
+            font-size: rem(38);
+            line-height: 135%;
+            font-family: $font_third;
+            text-align: right;
+            color: #84356A;
+
+            @include tablet_small{
+                font-size: 1.075rem;
+                line-height: 100%;
+            }
+        }
+    }
+
+    &__subtitle{
+        font-size: rem(14);
+        line-height: 150%;
+        margin-bottom: rem(20);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #323232;
+
+        @include tablet{
+            font-size: rem(12);
+            margin-bottom: rem(16);
+        }
+
+        @include tablet_small{
+            font-size: rem(12);
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__title{
+        font-size: rem(38);
+        font-family: $font_second;
+        line-height: 135%;
+        color: #323232;
+        margin-bottom: rem(30);
+
+        @include tablet{
+            font-size: rem(24);
+            margin-bottom: rem(20);
+        }
+
+        @include tablet_small{
+            font-size: rem(22);
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__text{
+        font-size: rem(18);
+        line-height: 170%;
+        color: #323232;
+
+        @include tablet{
+            font-size: rem(15);
+        }
+    }
+
+    &__image{
+        margin-bottom: rem(20);
+        background-position: center;
+        width: rem(820);
+        height: rem(600);
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+
+        @include tablet{
+            width: 100%;
+            height: rem(400);
+        }
+
+        @include tablet_small{
+            height: rem(250);
+        }
+    }
+
+    &__full{
+        width: 100%;
+        display: flex;
+        margin-top: rem(70);
+
+        @include tablet{
+            margin-top: rem(40);
+        }
+
+        @include tablet_small{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            width: 25%;
+            height: rem(230);
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 rem(70);
+
+            &.small_padd{
+                padding: 0 0.975rem;
+
+                @include tablet_small{
+                    padding: 0 0.575rem;
+                }
+            }
+
+            @include tablet{
+                padding: 0 rem(20);
+                height: rem(170);
+            }
+
+            @include tablet_small{
+                width: 50%;
+            }
+        }
+
+        &__number{
+            font-size: rem(70);
+            line-height: 170%;
+            width: 100%;
+            text-align: center;
+            font-family: 'Gilroy-Thin', Arial;
+            color: #FFFFFF;
+
+            @include tablet{
+                font-size: rem(40);
+            }
+
+            @include tablet_small{
+                font-size: rem(28);
+            }
+        }
+
+        &__text{
+            font-weight: 500;
+            font-size: rem(18);
+            line-height: 170%;
+            width: 100%;
+            text-align: center;
+            color: #FFFFFF;
+
+            @include tablet{
+                font-size: 0.825rem;
+            }
+        }
+    }
+}

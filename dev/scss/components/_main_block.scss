@@ -1,0 +1,348 @@
+.main_block{
+    width: 100%;
+
+    &__row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include tablet_small{
+            flex-wrap: wrap;
+        }
+
+        &.image__right{
+            .main_block__right{
+                margin-left: rem(90);
+                width: 55.3%;
+                flex-shrink: 0;
+
+                @include tablet{
+                    margin-left: rem(40);
+                }
+
+                @include tablet_small{
+                    display: none;
+                    padding-left: rem(16);
+                    padding-right: rem(16);
+                }
+            }
+
+            .main_block__left{
+                flex: 1;
+                padding-left: 10.8%;
+                box-sizing: content-box;
+
+                @include tablet{
+                    padding-left: rem(20);
+                }
+
+                @include tablet_small{
+                    padding-left: rem(16);
+                    padding-right: rem(16);
+                    margin-top: rem(50);
+                }
+            }
+        }
+
+        &.image__left{
+            .main_block__right{
+                width: 55.3%;
+                flex-shrink: 0;
+                padding-right: 14.2%;
+                padding-left: rem(90);
+
+                @include tablet{
+                    padding-right: rem(20);
+                    padding-left: rem(40);
+                }
+
+                @include tablet_small{
+                    padding-left: rem(16);
+                    width: 100%;
+                    padding-right: rem(16);
+                }
+            }
+
+            .main_block__left{
+                flex: 1;
+                box-sizing: content-box;
+                position: relative;
+
+                @include tablet_small{
+                    width: 100%;
+                    padding-left: rem(16);
+                    padding-right: rem(16);
+                    flex: unset;
+                }
+            }
+        }
+    }
+
+    &__subtitle{
+        font-size: rem(18);
+        line-height: 170%;
+        margin-bottom: rem(30);
+        color: #323232;
+
+        @include tablet{
+            font-size: rem(14);
+        }
+
+        @include tablet_small{
+            font-size: rem(14);
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__logo{
+        width: 100%;
+        height: rem(188);
+        margin-bottom: rem(50);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include tablet{
+            height: rem(100);
+            margin-bottom: rem(30);
+        }
+
+        @include tablet_small{
+            height: rem(150);
+            width: 100%;
+        }
+    }
+
+    &__text{
+        width: 100%;
+        max-width: rem(515);
+        margin-right: auto;
+        font-size: rem(18);
+        line-height: 170%;
+
+        @include tablet{
+            font-size: rem(16);
+        }
+
+        &.grey{
+            color: #868686;
+            max-width: 100%;
+
+            &:first-child{
+                margin-bottom: rem(20);
+
+                @include tablet{
+                    margin-bottom: rem(6);
+                }
+            }
+        }
+
+        &.not_mobile{
+
+            @include tablet_small{
+                display: none;
+            }
+        }
+    }
+
+    &__list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: rem(50);
+        width: 100%;
+
+        @include tablet_small{
+            margin-top: rem(30);
+        }
+
+        &__element{
+            transition: all .3s;
+            padding-bottom: rem(20);
+            border-bottom: 1px solid #32323236;
+            font-weight: 300;
+            font-size: rem(28);
+            line-height: 135%;
+            font-family: $font_third;
+            color: #323232;
+
+            &:hover{
+                padding-left: rem(30);
+            }
+
+            &:not(:first-child){
+                margin-top: rem(20);
+            }
+
+            @include tablet{
+                font-size: rem(22);
+            }
+        }
+    }
+
+    &__left{
+        &.middle{
+            height: rem(1060);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            align-content: flex-end;
+            justify-content: center;
+            padding-bottom: rem(140);
+
+            @include tablet{
+                height: 43.25rem;
+            }
+
+            @include tablet_small{
+                height: 8.75rem;
+                margin-top: rem(200);
+                margin-bottom: rem(30);
+            }
+        }
+
+
+        &.bottom{
+            @include tablet_small{
+                margin-top: rem(100)!important;
+            }
+        }
+    }
+
+    &__home{
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(40);
+        font-family: $font_second;
+        line-height: 135%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: rem(508);
+        box-sizing: content-box;
+        padding-left: rem(10);
+        padding-right: rem(10);
+
+        @include tablet{
+            font-size: rem(24);
+        }
+
+        @include tablet_small{
+            position: absolute;
+            font-size: rem(26);
+            color: black;
+            top: -6.775rem;
+            left: 0;
+            padding-left: rem(16);
+        }
+    }
+
+    &__right{
+        &.top{
+            height: rem(800);
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @include tablet{
+                height: rem(500);
+            }
+        }
+
+        &.bottom{
+            height: rem(785);
+
+        }
+    }
+
+    &__position{
+        font-weight: 500;
+        font-size: rem(14);
+        margin-bottom: rem(20);
+        line-height: 150%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #868686;
+
+        @include tablet{
+            font-size: rem(10);
+        }
+
+        @include tablet_small{
+            display: none;
+        }
+    }
+
+    &__title{
+        width: 100%;
+        font-style: normal;
+        font-family: $font_second;
+        font-size: rem(40);
+        line-height: 135%;
+        text-transform: uppercase;
+        color: #323232;
+        margin-bottom: rem(30);
+
+        @include tablet{
+            margin-bottom: rem(16);
+            font-size: rem(24);
+        }
+    }
+
+    &__more{
+        display: block;
+        width: 100%;
+        max-width: 20.0625rem;
+        padding: rem(32) rem(60);
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #67A15F;
+        border-radius: rem(50);
+        margin-top: rem(40);
+
+        @include tablet{
+            margin-top: rem(20);
+            font-size: rem(12);
+            padding: rem(16) rem(30);
+        }
+
+        &.mobile{
+            display: none;
+
+            @include tablet_small{
+                display: block;
+                width: 100%;
+                max-width: rem(320);
+            }
+        }
+    }
+
+    &__image_mobile{
+        display: none;
+
+        @include tablet_small{
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+            margin-right: -1rem;
+            display: block;
+            height: rem(230);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: rem(20);
+        }
+    }
+}

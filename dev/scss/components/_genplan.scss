@@ -1,0 +1,70 @@
+.genplan{
+    width: 100%;
+    height: rem(750);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet{
+        height: rem(600);
+    }
+
+    @include tablet_small{
+        height: rem(300);
+        margin-top: rem(100);
+    }
+
+    &__full{
+        display: block;
+        width: fit-content;
+    }
+
+    &__arrow{
+        width: rem(100);
+        height: rem(100);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: rem(30);
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(/images/genplan_arrow.svg);
+        transition: all .3s;
+
+        &:hover{
+            background-image: url(/images/arrow_white.svg);
+        }
+
+        &.video_arrow{
+            background-image: url(/images/video_play.svg);
+
+
+        &:hover{
+            background-image: url(/images/play_white.svg);
+        }
+        }
+
+        @include tablet{
+            width: rem(70);
+            height: rem(70);
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__text{
+        font-size: rem(14);
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(12);
+        }
+    }
+}

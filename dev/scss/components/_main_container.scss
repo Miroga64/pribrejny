@@ -1,0 +1,28 @@
+.main_container{
+    width: 100%;
+    max-width: rem(1540);
+    padding-left: rem(50);
+    padding-right: rem(50);
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    margin-right: auto;
+
+    &.mobile{
+        display: none;
+
+        @include tablet_small{
+            display: flex;
+            padding-left: rem(15);
+            padding-right: rem(15);
+        }
+    }
+
+    @include tablet{
+        padding-left: rem(15);
+        padding-right: rem(15);
+    }
+}

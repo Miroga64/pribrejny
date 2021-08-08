@@ -1,0 +1,119 @@
+.atmosphere{
+    width: 100%;
+
+    @include tablet{
+        width: calc(100% + 1.875rem);
+        margin-left: rem(-15);
+        margin-right: rem(-15);
+    }
+
+    &__slide{
+        display: flex!important;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: center;
+        width: 100%;
+        justify-content: space-between;
+
+        @include tablet{
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    .safety__left{
+        margin-top: rem(136);
+
+        @include tablet{
+            margin-top: 0;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            height: 33rem;
+            padding-bottom: rem(130);
+            background-color: #75A856;
+        }
+
+        @include tablet_small{
+            height: 26rem;
+        }
+    }
+
+    &__arrow{
+        width: rem(70);
+        height: rem(70);
+        background-image: url(/images/atmosphere_arrow.svg);
+        border-radius: 50%;
+        position: absolute;
+        top: auto;
+        bottom: rem(136);
+        left: auto;
+        right: calc(40% - 4.3rem);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        z-index: 2;
+        transition: all .3s;
+
+        &:hover{
+            background-image: url(/images/slider_arrow_white.svg);
+
+        }
+
+        &.rotate{
+            right: calc(40% - 9.3rem);
+            transform: rotate(180deg);
+        }
+
+        @include tablet{
+            width: rem(60);
+            height: rem(60);
+            bottom: rem(40);
+            left: calc(50% - 7rem);
+
+            &.rotate{
+                left: auto;
+                right: calc(50% - 7rem);
+            }
+        }
+    }
+
+    .safety__left__title{
+        font-size: rem(26);
+        line-height: 135%;
+        color: #FFFFFF;
+        margin-bottom: rem(20);
+
+        @include tablet_small{
+            font-size: rem(20);
+            margin-bottom: rem(10);
+        }
+    }
+
+    .safety__left__text{
+        font-size: rem(18);
+        line-height: 170%;
+
+        @include tablet_small{
+            font-size: rem(15);
+            line-height: 135%;
+        }
+    }
+
+    .safety__left__subtitle{
+        position: absolute;
+        top: auto;
+        bottom: 3rem;
+        left: calc(50% - 1rem);
+    }
+
+    .safety__right{
+
+        @include tablet{
+            width: calc(100% - 1.875rem);
+            margin-left: rem(15);
+            margin-right: rem(15);
+        }
+    }
+}

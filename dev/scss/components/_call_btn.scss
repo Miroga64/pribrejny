@@ -1,0 +1,55 @@
+.call_btn{
+    position: fixed;
+    left: auto;
+    right: rem(100);
+    width: rem(100);
+    bottom: rem(100);
+    height: rem(100);
+    background-color: #F54D40;
+    z-index: 100;
+    transition: all .3s;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+
+    &:hover{
+        background-color: #D85147;
+    }
+
+    &:after{
+        content: '';
+        width: rem(26);
+        height: rem(26);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/tell_white.svg);
+    }
+
+    @include tablet{
+        width: rem(60);
+        height: rem(60);
+        bottom: rem(60);
+        right: rem(60);
+
+        &:after{
+            width: rem(18);
+            height: rem(18);  
+        }
+    }
+
+    @include tablet_small{
+        width: rem(40);
+        height: rem(40);
+        bottom: rem(40);
+        right: rem(40);
+
+        &:after{
+            width: rem(14);
+            height: rem(14);  
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "mebelburg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "fotorama": "^4.6.4",
+    "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-include": "^2.4.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sass-globbing": "0.0.2",
+    "gulp-simple-compass": "^0.1.1",
+    "jquery": "^2.1.4",
+    "node-sass": "^4.14.1",
+    "swiper": "^4.5.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglyfly": "^1.4.2"
+  }
+}

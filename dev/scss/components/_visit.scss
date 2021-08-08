@@ -1,0 +1,85 @@
+.visit{
+    width: 100%;
+    background-color: #E4B24D;
+    padding: rem(60) rem(0);
+
+    @include tablet_small{
+        padding: rem(30) rem(0)
+    }
+
+    &__container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    &__left{
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__logo{
+        background-image: url(/images/kpd_stroke.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(172);
+        height: rem(73);
+        margin-right: rem(50);
+
+        @include tablet{
+            width: rem(120);
+            height: rem(50);
+            margin-right: rem(30);
+        }
+
+        @include tablet_small{
+            width: rem(80);
+            height: rem(40);
+            margin-right: rem(20);
+        }
+    }
+
+
+    &__text{
+        font-family: $font_second;
+        font-size: rem(26);
+        line-height: 135%;
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(22);
+        }
+
+        @include tablet_small{
+            font-size: rem(16);
+        }
+    }
+
+    &__right{
+        width: rem(70);
+        height: rem(70);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/visited_linked.svg);
+        transition: all .3s;
+
+        &:hover{
+            background-image: url(/images/arrow_white.svg);
+        }
+
+        @include tablet{
+            width: rem(50);
+            height: rem(50);
+        }
+
+        @include tablet_small{
+            width: rem(40);
+            height: rem(40);
+        }
+    }
+}

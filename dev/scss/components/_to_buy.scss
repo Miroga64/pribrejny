@@ -1,0 +1,82 @@
+.to_buy{
+    .planing__right{
+        background-image: none;
+        background-color: #67A15F;
+        height: rem(754);
+        padding-right: 15.3%;
+
+        @include tablet_small{
+            height: 19.125rem;
+        }
+    }
+
+    .page__title{
+        margin-bottom: rem(110);
+
+        @include tablet_small{
+            margin-bottom: rem(30);
+        }
+    }
+
+    .planing__list{
+        margin-bottom: rem(50);
+
+        @include tablet_small{
+            overflow-y: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    .planing__list__text{
+        @include tablet_small{
+            min-width: max-content;
+            width: max-content;
+            font-size: rem(14);
+        }
+    }
+
+    .planing__list__element{
+        span{
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        @include tablet_small{
+            min-width: max-content;
+            height: 2rem;
+            width: max-content;
+            padding: rem(3) rem(7);
+            border: none;
+            border-radius: 5px;
+            font-size: rem(14);
+        }
+    }
+
+    .planing{
+        @include tablet_small{
+            margin-top: rem(30);
+        }
+    }
+
+    &__title{
+        font-size: rem(28);
+        line-height: 135%;
+        color: #FFFFFF;
+        margin-bottom: rem(20);
+
+        @include tablet_small{
+            font-size: rem(20);
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__text{
+        font-size: rem(18);
+        line-height: 170%;
+        color: #FFFFFF;
+
+        @include tablet_small{
+            font-size: rem(14);
+        }
+    }
+}

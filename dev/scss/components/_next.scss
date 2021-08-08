@@ -1,0 +1,12 @@
+.next{
+    color: #67A15F;
+    text-decoration: underline;
+    font-size: rem(16);
+    cursor: pointer;
+    display: none;
+
+    @include tablet_small{
+        display: inline-block;
+        font-family: $font_second;
+    }
+}

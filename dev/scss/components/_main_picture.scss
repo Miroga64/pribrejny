@@ -1,0 +1,22 @@
+.main_picture{
+    position: absolute;
+    top: rem(400);
+    left: 0;
+    width: rem(1141);
+    height: rem(744);
+    background-position: left;
+    z-index: 4;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include tablet{
+        top: rem(300);
+        left: 0;
+        width: 33.25rem;
+        height: 24.5rem;
+    }
+
+    @include tablet_small{
+        display: none;
+    }
+}

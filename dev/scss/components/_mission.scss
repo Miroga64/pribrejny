@@ -1,0 +1,58 @@
+.mission{
+    width: 100%;
+    height: rem(408);
+    background-color: #5F535B;
+
+    @include tablet_small{
+        margin-top: rem(70);
+    }
+
+    .main_container{
+        height: 100%;
+    }
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        @include tablet_small{
+            flex-wrap: wrap;
+        }
+    }
+
+    .show_modal{
+        margin-left: auto;
+        margin-right: auto;
+        width: rem(250);
+        height: rem(250);
+        flex-shrink: 0;
+
+        @include tablet{
+            width: rem(170);
+            height: rem(170);
+        }
+    }
+
+    &__text{
+        font-family: $font_second;
+        font-size: rem(40);
+        line-height: 135%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: rem(650);
+
+        @include tablet{
+            font-size: rem(32);
+        }
+
+        @include tablet_small{
+            width: 100%;
+            font-size: rem(24);
+            margin-bottom: rem(20);
+            max-width: 100%;
+        }
+    }
+}

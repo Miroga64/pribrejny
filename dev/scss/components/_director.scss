@@ -1,0 +1,117 @@
+.director{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    @include tablet{
+        flex-wrap: wrap;
+    }
+
+    &__left{
+        width: 57%;
+        margin-top: rem(70);
+        height: rem(600);
+        position: relative;
+        z-index: 2;
+
+        @include tablet{
+            width: 100%;
+            height: 28.5rem;
+            margin-bottom: -28%;
+        }
+
+        @include tablet_small{
+            height: 15.625rem;
+        }
+
+        &__image{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__right{
+        width: 39.5%;
+        margin-left: auto;
+        padding: rem(130) rem(0) rem(120) rem(0);
+
+        @include tablet{
+            width: calc(100% + 1.875rem);
+            margin-left: -0.9375rem;
+            margin-right: -0.9375rem;
+            padding-left: 0.9375rem;
+            padding-right: 0.9375rem;
+            background-color: #F2F2F2;
+            padding-top: rem(260);
+            padding-bottom: rem(70);
+        }
+
+        @include tablet_small{
+            padding-top: 9.375rem;
+            padding-bottom: 3.125rem;
+        }
+
+        @include mobile{
+            padding-top: 7.375rem;
+        }
+
+        &__title{
+            font-size: rem(26);
+            font-family: $font_second;
+            line-height: 135%;
+            color: #323232;
+            margin-bottom: rem(20);
+
+            @include tablet{
+                font-size: rem(22);
+                margin-bottom: rem(15);
+            }
+
+            @include tablet_small{
+                font-size: rem(16);
+                margin-bottom: rem(16);
+            }
+        }
+
+        &__main{
+            font-weight: normal;
+            font-size: rem(18);
+            line-height: 170%;
+            color: #8C8C91;
+            margin-bottom: rem(50);
+
+            @include tablet{
+                margin-bottom: rem(14);
+                margin-bottom: rem(30);
+            }
+
+            @include tablet_small{
+                font-size: rem(12);
+                margin-bottom: rem(20);
+            }
+        }
+
+        &__text{
+            span{
+                font-size: rem(18);
+                display: flex;
+                line-height: 170%;
+                color: #323232;
+                margin-bottom: rem(10);
+
+                @include tablet{
+                    font-size: rem(14);
+                    margin-bottom: rem(6);
+                }
+
+                @include tablet_small{
+                    font-size: rem(12);
+                }
+            }
+        }
+    }
+}

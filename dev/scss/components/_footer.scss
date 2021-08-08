@@ -1,0 +1,352 @@
+.footer{
+   background-color: #323232;
+   padding: rem(40) 0;
+
+    &__top{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-between;
+        margin-bottom: rem(40);
+
+        @include tablet{
+            flex-wrap: wrap;
+        }
+    }
+
+    &.big{
+       padding-top: rem(195); 
+
+       @include tablet{
+           padding-top: rem(170);
+       }
+    }
+
+    &__logo{
+        width: rem(140);
+        height: rem(80);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/logo.svg);
+        margin-top: rem(15);
+        flex-shrink: 0;
+        margin-right: rem(105);
+
+        @include tablet{
+            width: rem(100);
+            height: rem(60);
+            margin-right: rem(60);
+        }
+
+        @include tablet_small{
+            width: rem(70);
+            height: rem(40);
+            margin-right: rem(30);
+            margin-top: 0;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-between;
+        margin-top: rem(30);
+
+        &__column{
+
+            &:not(:last-child){
+                margin-right: rem(60);
+            }
+
+            @include tablet{
+                &:not(:last-child){
+                    margin-right: rem(30);
+                }
+            }
+
+            @include tablet_small{
+                width: calc(50% - 0.75rem);
+                margin-bottom: rem(10);
+
+                &:not(:last-child){
+                    margin-right: rem(12);
+                }
+            }
+        }
+
+        @include tablet{
+            flex: 1;
+        }
+
+        @include tablet_small{
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 0;
+        }
+
+        &__link{
+            font-size: rem(14);
+            line-height: 150%;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            display: block;
+            color: #FFFFFF;
+
+            &:first-child{
+                margin-bottom: rem(20);
+            }
+
+            @include tablet{
+                font-size: rem(12);
+
+                &:first-child{
+                    margin-bottom: rem(16);
+                }
+            }
+
+            @include tablet_small{
+                font-size: 0.525rem;
+
+                &:first-child{
+                    margin-bottom: rem(10);
+                }
+            }
+        }
+    }
+
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: flex-end;
+        justify-content: flex-end;
+
+        @include tablet{   
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: flex-start;
+            margin-top: rem(30);
+        }
+    }
+
+    &__phone{
+        display: block;
+        margin-bottom: rem(5);
+        font-size: rem(26);
+        line-height: 150%;
+        text-align: right;
+        color:  #E89900;
+        font-family: $font_third;
+
+        @include tablet{
+            text-align: left;
+            font-size: rem(20);
+        }
+
+        @include mobile_middle{
+            font-size: rem(16);
+        }
+    }
+
+    &__time{
+        font-size: rem(14);
+        line-height: 170%;
+        text-align: right;
+        color: white;
+        margin-bottom: rem(5);
+
+        @include tablet{
+            text-align: left;
+            font-size: rem(12);
+        }
+
+        @include mobile_middle{
+            font-size: rem(10);
+        }
+    }
+
+    &__address{
+        font-weight: normal;
+        font-size: rem(14);
+        line-height: 170%;
+        color: #FFFFFF;
+        text-align: right;
+
+        @include tablet{
+            text-align: left;
+            font-size: rem(12);
+        }
+    }
+
+    &__mail{
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(14);
+        line-height: 170%;
+        text-align: right;
+        color: #E89900;
+    }
+
+    &__social{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: rem(40);
+        height: rem(40);
+        transition: all .3s;
+
+        &.fb{
+            background-image:url(/images/facebook.svg);
+
+            &:hover{
+                background-image:url(/images/fb_white.svg);
+            }
+        }
+
+        &.vk{
+            background-image:url(/images/vk.svg);
+
+            &:hover{
+                background-image:url(/images/vk_white.svg);
+            }
+        }
+
+        &.inst{
+            background-image:url(/images/inst.svg);
+
+            &:hover{
+                background-image:url(/images/inst_white.svg);
+            }
+        }
+
+        &:not(:last-child){
+            margin-right: rem(10);
+        }
+
+        @include mobile{
+            width: rem(30);
+            height: rem(30);
+
+            &:not(:last-child){
+                margin-right: rem(6);
+            }
+        }
+
+        &__container{
+            display: flex;
+            margin-top: rem(37);
+
+            @include tablet{
+                margin-top: rem(20);
+            }
+        }
+    }
+
+    &__middle{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: rem(40);
+        border-bottom: 1px solid #323232;
+        padding-bottom: rem(20);
+
+        @include mobile_middle{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__security{
+        width: 76.4%;
+        font-size: rem(14);
+        line-height: 170%;
+        color: white;
+        
+        @include tablet{
+            font-size: rem(12);
+        }
+
+        @include mobile_middle{
+            width: 100%;
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__company{
+        width: rem(150);
+        height: rem(57);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/kpd.svg);
+        border-bottom: 1px solid #323232;
+
+        @include tablet{
+            width: rem(100);
+            height: rem(38);
+        }
+
+        @include mobile_middle{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+        @include tablet{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__policy{
+        font-size: rem(14);
+        line-height: 170%;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(12);
+            order: 2;
+        }
+    }
+
+    &__potent{
+        font-size: rem(14);
+        line-height: 170%;
+        text-align: center;
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(12);
+            order: 1;
+            width: 100%;
+            text-align: left;
+            margin-bottom: rem(12);
+        }
+    }
+
+    &__personal{
+        font-size: rem(14);
+        line-height: 170%;
+        text-align: right;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+
+        @include tablet{
+            font-size: rem(12);
+            order: 3;
+        }
+    }
+
+}
